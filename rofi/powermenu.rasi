@@ -1,0 +1,127 @@
+/*******************************************************
+ * ROFI configs i3 powermenu for EndeavourOS
+ * Maintainer: joekamprad <joekamprad@endeavouros.com>
+ *******************************************************/
+
+configuration {
+    font:                           "Cascadia Code 12";
+    show-icons:                     false;
+    icon-theme: 		            "Arc-X-D";
+    scroll-method:                  0;
+    disable-history:                false;
+    sidebar-mode: 		            false;
+}
+
+@theme "catppuccin"
+
+window {
+    background-color:               @bg-col;
+    border:                         0;
+    padding:                        10;
+    transparency:                   "real";
+    width:                          180px;
+    location:                       east;
+/*  y-offset:                       18;*/
+/*  x-offset:	                    850;*/
+    transparency:                   "real";
+}
+listview {
+    lines:                          6;
+    columns:                        1;
+    scrollbar:			            false;
+    background-color: @bg-col;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: @bg-col;
+    text-color:       @fg-col;
+}
+element.normal.urgent {
+    background-color: @bg-col-light;
+    text-color:       @fg-col2;
+}
+element.normal.active {
+    background-color: @selected-col;
+    text-color:       @fg-col2;
+}
+element.selected.normal {
+    background-color: @selected-col;
+    text-color:       @fg-col2;
+}
+element.selected.urgent {
+    background-color: @selected-col;
+    text-color:       @fg-col2;
+}
+element.selected.active {
+    background-color: @selected-col;
+    text-color:       @fg-col2;
+}
+element.alternate.normal {
+    background-color: @bg-col-light;
+    text-color:       @fg-col;
+}
+element.alternate.urgent {
+    background-color: @bg-col-light;
+    text-color:       @fg-col;
+}
+element.alternate.active {
+    background-color: @bg-col-light;
+    text-color:       @fg-col;
+}
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-color: @fg-col;
+    handle-width: 8px ;
+    padding:      0;
+}
+
+button {
+    spacing:    0;
+    text-color: @fg-col;
+}
+inputbar {
+    spacing:    0;
+    background-color: @bg-col;
+    text-color: @fg-col;
+    border-radius: 5px;
+    padding:    2px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @fg-col;
+}
+entry {
+    spacing:    0;
+    padding: 6px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+prompt {
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+}
+mainbox {
+    background-color: @bg-col;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    padding: 6px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+
+
