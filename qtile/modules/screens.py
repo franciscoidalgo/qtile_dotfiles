@@ -6,6 +6,7 @@ from modules.keys import terminal
 import os
 
 from modules.palettes import catppuccin
+from modules.custom_widgets.custom_locks import CustomLock
 
 screens = [
     Screen(
@@ -116,9 +117,9 @@ screens = [
                     foreground=catppuccin["yellow"],
                     background=catppuccin["green"],
                 ),
-                widget.CapsNumLockIndicator(
+                CustomLock(
                     foreground=catppuccin["crust"],
-                    fmt=" {}",
+                    fmt="lock {}",
                     background=catppuccin["yellow"]
                 ),
                 widget.TextBox(
